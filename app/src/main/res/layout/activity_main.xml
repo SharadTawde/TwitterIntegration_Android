@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    app:elevation="0dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/divider3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_write"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:padding="15dp"
+            android:text="Select where to share "
+            android:textColor="#000"
+            android:textSize="22sp" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/twitter" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.05"
+                android:paddingLeft="15dp"
+                android:text="twitter "
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/twitter_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:clickable="true"
+                android:checked="false" />
+        </LinearLayout>
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="80dp"
+            android:background="#EAEAEA" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_write"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:background="#FCFCFC"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/ImageSelector"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="15dp"
+            android:onClick="onClick"
+            android:src="@drawable/addphoto"
+            android:tint="#BFE6E7E7" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FCFCFC"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Write here..."
+            android:inputType="textMultiLine"
+            android:letterSpacing="0.05"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="40dp"
+            android:singleLine="false"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ffff"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="right"
+        android:padding="15dp"
+        android:onClick="onClick"
+        android:stateListAnimator="@null"
+        android:text="Share"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/btn_share"
+        android:background="#EAEAEA" />
+
+</RelativeLayout>

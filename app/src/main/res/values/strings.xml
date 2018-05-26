@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TwitterIntegration</string>
+    <string name="twitter_callback">https://twitter.com/oauth/request_token</string> <!-- TODO add this callback url to your apps.twitter.com -->
+    <string name="twitter_consumer_key">--paste your consumer key--</string>
+    <string name="twitter_consumer_secret">--paste your consumer secret--</string>
+    <string name="twitter_oauth_verifier">oauth_verifier</string>
+</resources>
